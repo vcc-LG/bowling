@@ -1,8 +1,13 @@
-class Game
-    def roll(_pins)
-    end
+# frozen_string_literal: true
 
-    def score 
-        0
-    end
+class Game
+  def initialize
+    @score = 0
+  end
+
+  def roll(pins)
+    @score += pins
+  end
+
+  attr_reader :score
 end
